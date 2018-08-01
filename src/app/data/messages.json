@@ -1,0 +1,14 @@
+[
+    {
+        "userId":1,
+        "sender":2,
+        "subject": "message one subject",
+        "messageBody":"message one body"
+    },
+    {
+        "userId":1,
+        "sender":3,
+        "subject": "message two subject",
+        "messageBody":"message two body"
+    }
+]

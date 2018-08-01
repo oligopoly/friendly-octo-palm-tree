@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <a [routerLink]="['/']">
+    <button mat-stroked-button color="primary" class="toolbarButton">
+      <mat-icon>home</mat-icon><span>Home</span>
+    </button>
+  </a> 
+
+  <a [routerLink]="['/notifications', userId]">
+    <button mat-stroked-button color="primary" class="toolbarButton">
+      <mat-icon>notifications</mat-icon><span>Notifications</span>
+    </button>
+  </a>  
+
+<a [routerLink]="['/messages', userId]">
+  <button mat-stroked-button color="primary" class="toolbarButton">
+    <mat-icon>message</mat-icon><span>Messages</span>
+  </button>
+</a>  
+</mat-toolbar>
