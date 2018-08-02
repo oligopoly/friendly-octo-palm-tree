@@ -17,6 +17,6 @@ export class MessagesComponent
   constructor(route: ActivatedRoute, messageService: MessageService) 
   { 
     route.paramMap.subscribe(params => this.userId = params.get('userId'));
-    this.message = messageService.getAll(); //test
+    this.message = messageService.getAll(); 
   }
 }
