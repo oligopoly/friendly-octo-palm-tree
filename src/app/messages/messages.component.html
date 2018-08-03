@@ -1,7 +1,10 @@
 <p>
   messages for user {{userId}}:
-  {{message.userId}}
-  {{message.sender}}
-  {{message.subject}}
-  {{message.messageBody}}
 </p>
+
+  <div *ngFor='let message of messages | async' >
+    {{message.recipient}} |
+    {{message.sender}} |
+    {{message.subject}} |
+    {{message.messageBody}} |
+  </div>

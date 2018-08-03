@@ -2,24 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from '../../../node_modules/rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
-
-export class Message
+export interface Message
 {
-  constructor(
-    public userId:number,
-    public sender:number,
-    public subject:string,
-    public messageBody:string){}
+  recipient:number;
+  sender:string;
+  subject:string;
+  messageBody:string;
 }
+
+@Injectable()
 export class MessageService {
 
-  constructor(){}
+  constructor(private http: HttpClient){}
 
-  getAll(): Message
+  getAll(): Observable<Message[]>
   {
-    return (new Message(910,911,"subject","body" ));
+    return this.http.get<Message[]>('/assets/data/messages.json');
   }
 }

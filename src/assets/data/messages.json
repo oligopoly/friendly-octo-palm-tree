@@ -1,13 +1,13 @@
 [
     {
-        "userId":1,
-        "sender":2,
+        "recipient":1,
+        "sender":"billy bob thortn",
         "subject": "message one subject",
         "messageBody":"message one body"
     },
     {
-        "userId":1,
-        "sender":3,
+        "recipient":1,
+        "sender":"AJ",
         "subject": "message two subject",
         "messageBody":"message two body"
     }

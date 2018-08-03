@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { MessageService, Message } from '../shared/message.service';
 import { Observable } from '../../../node_modules/rxjs';
+
+import { Component } from '@angular/core';
+import { MessageService, Message } from '../shared/message.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'mu-messages',
@@ -9,14 +10,15 @@ import { Observable } from '../../../node_modules/rxjs';
   styleUrls: ['./messages.component..scss'],
   providers: [MessageService]
 })
+
 export class MessagesComponent 
 {
   userId: string;
-  message: Message;
+  messages: Observable<Message[]>;
 
   constructor(route: ActivatedRoute, messageService: MessageService) 
   { 
     route.paramMap.subscribe(params => this.userId = params.get('userId'));
-    this.message = messageService.getAll(); 
+    this.messages = messageService.getAll(); 
   }
 }
