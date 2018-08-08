@@ -1,3 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mu-toolbar></mu-toolbar>
-<router-outlet></router-outlet>
+<div class="main">
+    <mu-toolbar></mu-toolbar>
+    <div class="parent" fxLayout="row" fxLayout.lt-sm="column" >
+        
+        <div fxFlex="25%" class="left" fxFlexOrder=1 *ngIf="mobileMode | async">Left</div>
+
+        <div fxFlex="50%" class="middle" fxFlexOrder=2 >
+            <router-outlet></router-outlet>
+        </div>
+        
+        <div fxFlex="25%" class="right" fxFlexOrder=3 *ngIf="mobileMode | async">Right</div>
+    </div>
+</div>

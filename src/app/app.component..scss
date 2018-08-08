@@ -1,0 +1,18 @@
+.parent { 
+    background-color: #f5f5f5;
+}
+    .left   { 
+                background-color: #f5f5f5;
+                border-style: dotted;
+                border-width: 1px; 
+            }
+    .middle { 
+                background-color: #f5f5f5; 
+                border-style: dotted none dotted none;
+                border-width: 1px;
+            }
+    .right  { 
+                background-color: #f5f5f5; 
+                border-style: dotted;
+                border-width: 1px;
+            }
