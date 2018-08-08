@@ -19,5 +19,5 @@ export class AppComponent {
             console.log(MediaChange.mqAlias);
             return MediaChange.mqAlias!=='xs'? true: false;
           }))
-  }
+  } //test
 }
